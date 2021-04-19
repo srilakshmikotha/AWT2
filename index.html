@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>Firebase CRUD Operations</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script src="crud.js"></script>
+    <style>
+        table{
+            margin: 30px;
+            background-color: rgba(0, 0, 0, 0.0);
+            border: 1px solid black;
+            border-collapse: collapse;        
+        }
+        #box{
+            margin: 150px;
+            border-radius: 20px;
+                padding: 40px;
+                background: rgba(235, 222, 41, 0.7);
+                box-shadow: 0 15px 25px  rgba(0,0,0,.8);
+        }
+        body{
+            background-image: url(https://wallpaper.dog/large/5495396.jpg);
+            background-repeat:no-repeat;
+            background-position:relative;
+            background-size: cover;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #insert{
+            background-color: rgb(240, 104, 104);
+            padding:5px 10px;
+            border-radius: 10px;
+        }
+        #delete{
+            background-color: rgb(226, 240, 104);
+            padding:5px 10px;
+            border-radius: 10px;
+        }
+        #update{
+            background-color: rgb(142, 250, 115);
+            padding:5px 10px;
+            border-radius: 10px;
+        }
+        #retrieve{
+            background-color: rgb(133, 182, 245);
+            padding:5px 10px;
+            border-radius: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <center>
+        <div id="box">
+    <h3>CRUD OPERATIONS</h3>
+    NAME OF THE CHARACTER : <input type="text" id="name"><br><br>
+    AGE  : <input type="text" id="age"><br><br>
+    <button class="button" id="insert"  onclick="insertData()">INSERT</button>
+    <button id="delete" onclick="deleteData()">DELETE</button>
+    <button id="update" onclick="updateData()">UPDATE AGE</button>
+    <button id="retrieve" onclick="retrieveData()">RETRIEVE</button><br>
+    <div id="table"></div><br>
+</div>
+    </center>
+</body>
